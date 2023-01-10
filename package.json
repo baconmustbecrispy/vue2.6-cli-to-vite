@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue src",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@unocss/reset": "^0.48.3",
@@ -15,14 +19,21 @@
     "@unocss/preset-icons": "^0.48.3",
     "@unocss/preset-uno": "^0.48.3",
     "@unocss/transformer-directives": "^0.48.3",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
     "lodash": "^4.17.21",
+    "prettier": "^2.8.2",
     "unocss": "^0.48.3",
     "unocss-preset-extra": "^0.4.3",
     "vite": "^4.0.4",
     "vite-plugin-vue2": "^2.0.3",
+    "vue-eslint-parser": "^9.1.0",
     "vue-template-compiler": "^2.6.14"
   },
   "peerDependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "prettier": "^2.8.2"
   }
 }

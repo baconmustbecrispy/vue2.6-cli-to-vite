@@ -1,10 +1,8 @@
 <template>
   <div id="app" class="flex flex-col items-center">
-    <img alt="Vue logo" src="./assets/logo.png"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" class="text-center" />
-    <div class="text-5xl fw100 animate-bounce-alt animate-count-infinite animate-duration-1s">
-      unocss
-    </div>
+    <div class="text-5xl fw100 animate-bounce-alt animate-count-infinite animate-duration-1s"> unocss </div>
     <div class="flex justify-center items-center my-2 gap-2">
       <div class="text-red">RED</div>
       <div class="text-green font-900">GREEN</div>
@@ -19,26 +17,32 @@
       <el-button type="warning" icon="el-icon-star-off" circle></el-button>
       <el-button type="danger" icon="el-icon-delete" circle></el-button>
     </el-row>
-    <br/>
+    <br />
     <el-row>
       <el-button :plain="true" @click="open1">Element UI</el-button>
     </el-row>
+    {{ dData ?? 'dData is undefined' }}
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
-  name: "app",
+  name: 'App',
   components: {
     HelloWorld,
+  },
+  data() {
+    return {
+      dData: undefined,
+    };
   },
   methods: {
     open1() {
       this.$message({
-        type: "success",
-        message: "test message",
+        type: 'success',
+        message: 'test message',
       });
     },
   },
