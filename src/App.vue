@@ -1,7 +1,16 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="flex flex-col items-center">
+    <img alt="Vue logo" src="./assets/logo.png"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" class="text-center" />
+    <div class="text-5xl fw100 animate-bounce-alt animate-count-infinite animate-duration-1s">
+      unocss
+    </div>
+    <div class="flex justify-center items-center my-2 gap-2">
+      <div class="text-red">RED</div>
+      <div class="text-green font-900">GREEN</div>
+      <div class="text-blue font-900">BLUE</div>
+      <div class="i-mdi-alarm text-orange-400"></div>
+    </div>
     <el-row>
       <el-button icon="el-icon-search" circle></el-button>
       <el-button type="primary" icon="el-icon-edit" circle></el-button>
@@ -35,14 +44,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
